@@ -1,0 +1,650 @@
+/* Importamos nuestra fuente que se usara en todo nuestro proyecto */
+@import url("https://use.typekit.net/pkm1thi.css");
+
+/* Formateamos nuestra pagina para empezar a trabajar */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Damos formato a nuestros links y como es que se veran. teniendo animaciones */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: rgb(7, 233, 90);
+}
+
+body {
+    background-color: #F4F3EF;
+}
+
+.totalColor {
+    background: linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252));
+}
+
+/*Se utiliza para la seleccion de texto, cambia sus colores*/
+::selection {
+    background: #f86011;
+    /*Color naranja para el fondo*/
+    color: #fff;
+    /*Color blanco para el texto seleccionado*/
+}
+
+/* AQUI ES PARA DESKTOP */
+
+/* Iniciamos nuestro grid */
+#mainIndex {
+    display: grid;
+    grid-template-areas: "hdr"
+        "art"
+        "ftr";
+    row-gap: 1%;
+}
+
+#mainProx {
+    display: grid;
+    grid-template-areas: "hdr hdr"
+        "img art"
+        "ftr ftr";
+    row-gap: 5%;
+    justify-content: center;
+
+}
+
+#mainAnte {
+    display: grid;
+    grid-template-areas: "hdr"
+        "gal"
+        "ftr";
+    row-gap: 5%;
+    justify-content: center;
+
+}
+
+#mainCom {
+
+    display: grid;
+    grid-template-areas: "hdr"
+        "art"
+        "col"
+        "ftr";
+    row-gap: 1%;
+    justify-content: center;
+}
+
+#mainCont {
+
+    display: grid;
+    grid-template-areas: "hdr"
+        "art"
+        "ico"
+        "logo";
+    row-gap: 7%;
+    justify-items: center;
+}
+
+
+/* hdr: header, article: art, footer: ftr */
+
+/* _________________________________ */
+
+/* Aqui iniciamos nuestro HEADER */
+
+/* Generamos un grid que contiene tanto nuestra barra de navegacion, nuestro logo y nuestro titulo */
+
+header {
+    grid-area: hdr;
+    display: grid;
+    grid-template-areas:
+        "logo nav"
+        "tit tit";
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: 80% 20%;
+    align-items: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: 4%;
+    margin-right: 30%;
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+h1 {
+    grid-area: tit;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+}
+
+.min {
+    text-transform: lowercase;
+
+}
+
+.checkbox {
+    display: none;
+}
+
+/* __________________________________ */
+
+/* Aqui iniciamos nuestro Article */
+
+article {
+    grid-area: art;
+    align-self: center;
+    justify-self: center;
+}
+
+h2 {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    margin-top: 3%;
+    font-style: normal;
+    text-align: center;
+}
+
+article p {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 21%;
+    margin-right: 21%;
+}
+
+article p span {
+    font-style: italic;
+}
+
+#imgProx {
+    grid-area: img;
+    width: 60%;
+    justify-self: center;
+    margin-left: 15%;
+}
+
+.textoInicio {
+    text-align: start;
+    margin-right: 30%;
+}
+
+.linkColab {
+    font-weight: 700;
+    margin-left: 3%;
+}
+
+#galleryAnte {
+    grid-area: gal;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    row-gap: 2%;
+}
+
+.imgGrid {
+    width: 80%;
+    border-radius: 10%;
+}
+
+/* Cards de nuestros colaboradores */
+
+#colabCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.colabCard {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.imgMesa {
+    width: 100%;
+    height: auto;
+}
+
+.cardOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.colabCard:hover .cardOverlay {
+    transform: translateY(0);
+}
+
+.cardHeader {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    background-color: #fff;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.colabCard:hover .cardHeader {
+    transform: translateY(0);
+}
+
+.imgColab {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.descCard {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #000;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* __________________________________ */
+
+/* Aqui iniciamos nuestro Footer */
+
+footer {
+    color: transparent;
+    grid-area: ftr;
+    margin-top: 20%;
+    padding: 2%;
+    background: linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252));
+    display: grid;
+    grid-template-columns: 5% 15% 5%;
+    justify-content: space-between;
+}
+
+.logoFooter {
+    transition: 1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    top: -60%;
+    max-width: 100%;
+    background: linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252));
+    border-radius: 100%;
+}
+
+.logoFooter1 {
+    transition: 1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-area: logo;
+    position: relative;
+    top: -60%;
+    max-width: 100%;
+    background: linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252));
+    border-radius: 100%;
+}
+
+.logoFooter1:hover,
+.redesLogos:hover,
+.logoFooter:hover {
+    transform: translateY(-5%) translateY(2%);
+    transition: 1s ease-in-out;
+}
+
+
+.redesLogos {
+    transition: 1s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 90%;
+    padding: 15%;
+    background: linear-gradient(to left, rgb(134, 239, 172), rgb(192, 132, 252));
+    border-radius: 100%;
+}
+
+.iconosRedes {
+    grid-area: ico;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+}
+
+#insta {
+    position: relative;
+    left: 750%;
+    top: 10%;
+}
+
+#face {
+    position: relative;
+    right: 750%;
+    top: 10%;
+}
+
+.resize {
+    width: 20%;
+    position: relative;
+    top: -80%;
+}
+
+.conText {
+    font-size: 130%;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* __________________________________ */
+
+/* Aqui se genera nuestro media para tablet */
+@media (max-width: 1080px) {
+
+
+    /* GRIDS DE DISTINTAS PAGES */
+    #mainIndex {
+        grid-template-areas: "hdr"
+            "art"
+            "ftr";
+        row-gap: 4%;
+    }
+
+    #mainProx {
+        row-gap: 6%;
+        display: grid;
+        grid-template-areas: "hdr"
+            "img"
+            "art"
+            "ftr";
+    }
+
+    /* Todos los HEADERS */
+
+    header {
+        display: grid;
+        grid-template-areas:
+            "nav nav"
+            "tit tit";
+        grid-template-columns: 2fr 7fr;
+        grid-template-rows: 80% 20%;
+        row-gap: 20%;
+        align-items: center;
+        margin-bottom: 4%;
+    }
+
+
+
+
+    /* PROX PAGINA */
+
+    #imgProx {
+        margin: 0;
+    }
+
+
+    .textoInicio {
+        text-align: center;
+        margin: 0 15% 0 15%;
+    }
+
+    /* COMUNIDAD PAGINA */
+    #colabCards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* FOOTERS TODOS */
+
+    .redesLogos {
+        max-width: 100%;
+        padding: 15%;
+
+    }
+
+    .resize {
+        width: 27%;
+        position: relative;
+        top: -20%;
+    }
+
+
+    /* _______________ 🍔🍔🍔 HAMBURGUER 🍔🍔🍔______________ */
+
+    .logo {
+        position: absolute;
+        right: 3%;
+        top: 2%;
+        background: linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252));
+        border-radius: 100%;
+        width: 15%;
+
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: start;
+        min-width: 100vw;
+    }
+
+    header nav ul li {
+        margin-bottom: 7%;
+    }
+
+    .contenedor {
+        max-width: 100%;
+        width: 96%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .contenedorNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px;
+    }
+
+    .contenedorNav {
+        display: block;
+        z-index: 4;
+        position: relative;
+        height: 60px;
+    }
+
+    .contenedorNav .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 8;
+        opacity: 0;
+        cursor: pointer;
+
+    }
+
+    .contenedorNav .lineasHamburguer {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contenedorNav .lineasHamburguer .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+    }
+
+    .contenedorNav .lineasHamburguer .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .contenedorNav .lineasHamburguer .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .contenedorNav .lineasHamburguer .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .contenedorNav input[type="checkbox"]:checked~ul {
+        transform: translateX(0);
+    }
+
+    .contenedorNav input[type="checkbox"]:checked~.lineasHamburguer .line1 {
+        transform: rotate(45deg);
+    }
+
+    .contenedorNav input[type="checkbox"]:checked~.lineasHamburguer .line2 {
+        transform: scaleY(0);
+    }
+
+    .contenedorNav input[type="checkbox"]:checked~.lineasHamburguer .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .navbar ul {
+        padding-top: 120px;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+        height: 100vh;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+        z-index: 2;
+        background-color: #F4F3EF;
+    }
+
+
+
+}
+
+@media (max-width: 430px) {
+
+    /* TODOS LOS HEADERS */
+
+
+    #logoContainer {
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 20%;
+        top: 0.5%;
+        right: 1.5%;
+    }
+
+    header {
+        row-gap: 40%;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+
+    /* ARTICLE */
+
+    #colabCards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin: 0rem 5vw;
+        padding: 0;
+        list-style-type: none;
+    }
+
+
+    /* ARTICLE DE TODOS*/
+
+
+    #imgProx {
+        margin-top: 5%;
+        width: 90%;
+    }
+
+    article p {
+        margin: 5% 15% 7% 15%;
+    }
+
+    .textoInicio {
+        margin-bottom: 8%;
+        margin-top: -8%;
+    }
+
+    /* Iconos redes de contacto */
+
+    .iconosRedes{
+        margin-left: 4%;
+        width: 60%;
+    }
+
+    .redesLogos{
+        width: 80%;
+    }
+
+    h2{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+
+
+}
