@@ -1,0 +1,52 @@
+/* Formateamos nuestra pagina para empezar a trabajar */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+    background-color: transparent;
+}
+
+/*Damos un estilo a todo nuestro body*/
+body {
+    background-color: #F4F3EF;
+    animation: transitionIn  1s;
+}
+
+/* Ocultamos todos nuestro scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Damos formato a nuestros links y como es que se veran. teniendo animaciones */
+a {
+    text-decoration: none;
+    color: #000;
+    &:hover{
+        color: rgb(7, 233, 90);
+    }
+}
+
+/*Realizamos una trancision cuando se inicia nuestra pagina.*/
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*Se utiliza para la seleccion de texto, cambia sus colores*/
+::selection {
+    background: #f86011;
+    /*Color naranja para el fondo*/
+    color: #fff;
+    /*Color blanco para el texto seleccionado*/
+}

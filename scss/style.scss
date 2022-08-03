@@ -1,0 +1,39 @@
+/* IMPORTACIONES DENTRO DE NUESTRO SCSS*/
+
+/* Importamos nuestra fuente que se usara en todo nuestro proyecto */
+@import url("https://use.typekit.net/pkm1thi.css");
+
+
+/* Importamos el SCSS para particularidades en breaks*/
+@import './layouts/breaks';
+
+/* Importamos el SCSS para nuestro formateo*/
+@import './layouts/preformat';
+
+/* Importamos el SCSS para particularidades en contacto*/
+@import './layouts/contacto';
+
+/* Importamos el SCSS para nuestra hamburger*/
+@import './layouts/hamburger';
+
+/* Importamos el SCSS para particularidades en proximos*/
+@import './layouts/prox.scss';
+
+/* Importamos el SCSS para particularidades en ante*/
+@import './layouts/ante.scss';
+
+/* Importamos el SCSS para todos nuestros header*/
+@import './layouts/header';
+
+/* Importamos el SCSS para todos nuestros header*/
+@import './layouts/article';
+
+/* Importamos el SCSS para particularidades en Index*/
+@import './layouts/index';
+
+/* Importamos el SCSS para todos nuestros footer*/
+@import './layouts/footer';
+
+/* Importamos el SCSS para nuestra comunidad*/
+@import './layouts/comun';
+

@@ -1,0 +1,84 @@
+#colabCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+
+    & .colabCard {
+        position: relative;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        text-decoration: none;
+
+        & .imgMesa {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.cardOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+
+    & .cardHeader {
+        background-color: #fff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        padding: 2em;
+        background-color: #fff;
+        transform: translateY(-100%);
+        transition: .2s ease-in-out;
+    }
+
+    & .imgColab {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    
+    & .descCard {
+        padding: 0 2em 2em;
+        margin: 0;
+        color: #000;
+        font-family: neue-haas-grotesk-display, sans-serif;
+        font-weight: 500;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+}
+
+.colabCard:hover .cardOverlay {
+    transform: translateY(0);
+}
+
+
+.colabCard:hover .cardHeader {
+    transform: translateY(0);
+}
+
+@media (max-width: 430px) {
+    #colabCards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin: 0rem 5vw;
+        padding: 0;
+        list-style-type: none;
+    }
+
+}
+

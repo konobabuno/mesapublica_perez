@@ -1,0 +1,114 @@
+/* Aqui iniciamos nuestro Footer */
+
+footer {
+    color: transparent;
+    grid-area: ftr;
+    margin-top: 20%;
+    padding: 2%;
+    background: linear-gradient(to right,rgb(86, 221, 178), rgb(134, 239, 172), rgb(192, 132, 252), rgb(255, 91, 176));
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+    display: grid;
+    grid-template-columns: 5% 15% 5%;
+    justify-content: space-between;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 25%;
+        }
+        50% {
+            background-position: 50% 25%;
+        }
+        100% {
+            background-position: 0% 25%;
+        }
+    }    
+
+    /* LOGOS DE INSTAGRAM Y FACEBOOK*/
+    #insta {
+        position: relative;
+        left: 750%;
+        top: 10%;
+
+        .redesLogos {
+            transition: 1s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            max-width: 90%;
+            padding: 15%;
+            background: linear-gradient(to left, rgb(134, 239, 172), rgb(192, 132, 252));
+            border-radius: 100%;
+
+            @include phone {
+
+                max-width: 200%;
+        }
+
+            &:hover {
+                transform: translateY(-5%) translateY(2%);
+                transition: 1s ease-in-out;
+            }
+        }
+    }
+
+        /* LOGO DE MESA PUBLICA Y SU ANIMACION*/
+        & .logoFooter {
+            transition: 1s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: relative;
+            top: -60%;
+            max-width: 100%;
+            background: linear-gradient(to right, rgb(134, 239, 172), rgb(192, 132, 252));
+            border-radius: 100%;
+    
+            &:hover {
+                transform: translateY(-5%) translateY(2%);
+                transition: 1s ease-in-out;
+            }
+        }
+
+    #face {
+        position: relative;
+        right: 750%;
+        top: 10%;
+
+        @include phone {
+            right: 820%;
+    }
+        
+        .redesLogos {
+            transition: 1s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            max-width: 90%;
+            padding: 15%;
+            background: linear-gradient(to left, rgb(134, 239, 172), rgb(192, 132, 252));
+            border-radius: 100%;
+
+            @include phone {
+                    max-width: 200%;
+            }
+
+            &:hover {
+                transform: translateY(-5%) translateY(2%);
+                transition: 1s ease-in-out;
+            }
+        }
+    }
+
+}
+
+@include tablet{
+    .redesLogos {
+        max-width: 100%;
+        padding: 15%;
+
+    }
+
+    .resize {
+        width: 27%;
+        position: relative;
+        top: -20%;
+    }
+
+}
+
+
