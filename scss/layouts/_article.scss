@@ -1,0 +1,46 @@
+/* Aqui iniciamos nuestro Article */
+
+article {
+    grid-area: art;
+    align-self: center;
+    justify-self: center;
+
+    & h2 {
+        font-family: neue-haas-grotesk-display, sans-serif;
+        font-weight: 600;
+        margin-top: 3%;
+        font-style: normal;
+        text-align: center;
+    }
+
+    & p {
+        text-align: center;
+        margin-top: 2%;
+        margin-left: 21%;
+        margin-right: 21%;
+
+        & span {
+            font-style: italic;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+
+
+    article h2{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    article p {
+        margin: 5% 15% 7% 15%;
+    }
+
+    .textoInicio {
+        margin-bottom: 8%;
+        margin-top: -8%;
+    }
+
+
+}

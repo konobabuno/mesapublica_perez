@@ -1,0 +1,106 @@
+/* Aqui iniciamos nuestro HEADER */
+
+/* Generamos un grid que contiene tanto nuestra barra de 
+navegacion, nuestro logo y nuestro titulo */
+
+header {
+    grid-area: hdr;
+    display: grid;
+    grid-template-areas:
+        "logo nav"
+        "tit tit";
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: 80% 20%;
+    align-items: center;
+
+    #logoContainer{
+        display: flex;
+        justify-content: center;  
+    }
+
+    .logo {
+        grid-area: logo;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    & nav{
+        grid-area: nav;
+
+        & ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            list-style: none;
+            margin-left: 4%;
+            margin-right: 30%; 
+
+            @include tablet {
+                justify-content: start;
+
+                & li{
+                    margin-top: 1%; 
+                }
+            }
+        }
+        
+    }
+
+    & h1 {
+        grid-area: tit;
+        font-family: neue-haas-grotesk-display, sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        text-align: center;
+    }
+}
+
+
+.min {
+    text-transform: lowercase;
+
+}
+
+.checkbox {
+    display: none;
+}
+
+@include tablet {
+
+    header {
+        display: grid;
+        grid-template-areas:
+            "nav nav"
+            "tit tit";
+        grid-template-columns: 2fr 7fr;
+        grid-template-rows: 80% 20%;
+        row-gap: 20%;
+        align-items: center;
+        margin-bottom: 4%;
+
+        & .logo{
+            width: 10%;
+        }
+    }
+
+}
+
+@media (max-width: 430px) {
+    #logoContainer {
+        overflow: hidden;
+    }
+
+    header {
+        row-gap: 40%;
+        align-items: center;
+        margin-bottom: 10%;
+
+        .logo {
+            width: 20%;
+            top: 0.5%;
+            right: 1.5%;
+        }
+    }
+
+}

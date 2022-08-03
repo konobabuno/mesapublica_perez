@@ -1,0 +1,21 @@
+/* AQUI ES PARA DESKTOP */
+
+/* Iniciamos nuestro grid de INDEX */
+#mainIndex {
+    display: grid;
+    grid-template-areas: "hdr"
+        "art"
+        "ftr";
+    row-gap: 1%;
+}
+
+
+@include tablet{
+    #mainIndex {
+        grid-template-areas: "hdr"
+            "art"
+            "ftr";
+        row-gap: 4%;
+    }
+
+}

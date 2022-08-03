@@ -1,0 +1,60 @@
+/* Iniciamos nuestro grid del main PROX*/
+
+#mainProx {
+    display: grid;
+    grid-template-areas: "hdr hdr"
+        "img art"
+        "ftr ftr";
+    row-gap: 5%;
+    justify-content: center;
+
+}
+
+/* Imagen de la proxima mesa publica*/
+#imgProx {
+    grid-area: img;
+    width: 60%;
+    justify-self: center;
+    margin-left: 15%;
+}
+
+/*Texto al inicio del parrafo*/
+.textoInicio {
+    text-align: start;
+    margin-right: 30%;
+
+    & .linkColab {
+        font-weight: 700;
+        margin-left: 3%;
+    }
+}
+
+@include tablet {
+    #mainProx {
+        row-gap: 6%;
+        display: grid;
+        grid-template-areas: "hdr"
+            "img"
+            "art"
+            "ftr";
+    }
+
+    #imgProx {
+        margin: 0;
+    }
+
+
+    .textoInicio {
+        text-align: center;
+        margin: 0 15% 0 15%;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    #imgProx {
+        margin-top: 5%;
+        width: 90%;
+    }
+}

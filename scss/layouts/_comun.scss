@@ -1,0 +1,20 @@
+/* Importamos el SCSS para nuestras cards*/
+@import './card';
+
+#mainCom {
+
+    display: grid;
+    grid-template-areas: "hdr"
+        "art"
+        "col"
+        "ftr";
+    row-gap: 1%;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    #colabCards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
