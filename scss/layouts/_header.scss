@@ -86,7 +86,7 @@ header {
 
 }
 
-@media (max-width: 430px) {
+@include phone {
     #logoContainer {
         overflow: hidden;
     }
