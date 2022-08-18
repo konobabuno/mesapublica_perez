@@ -8,6 +8,8 @@
     <meta name="keywords" content="contacto mesa publica, contacto mesa, redes mesa publica, redes mesa">
     <meta name="description" content="Redes de Mesa Pública para contactarnos">
     <title>MESA PÚBLICA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 </head>
@@ -27,21 +29,21 @@
                             <span class="line line2"></span>
                             <span class="line line3"></span>
                         </div>
-                        <ul>
+                        <ul class="w-100">
                             <li>
                                 <a href="../index.html" class="link">INICIO</a>
                             </li>
                             <li>
-                                <a href="./prox.html">MESAS PRÓXIMAS</a>
+                                <a href="./prox.html" class="link ms-5">MESAS PRÓXIMAS</a>
                             </li>
                             <li>
-                                <a href="./comunidad.html">COMUNIDAD</a>
+                                <a href="./comunidad.html" class="link ms-5">COMUNIDAD</a>
                             </li>
                             <li>
-                                <a href="./ante.html">MESAS ANTERIORES</a>
+                                <a href="./ante.html" class="link ms-5">MESAS ANTERIORES</a>
                             </li>
                             <li>
-                                <a href="./contacto.html">CONTACTO</a>
+                                <a href="./contacto.html" class="link ms-5">CONTACTO</a>
                             </li>
                         </ul>
                     </div>
@@ -57,8 +59,10 @@
 
         </article>
 
+
         <!-- Aqui tenemos nuestro footer, donde tenemos nuestro contenido para que se encuentra a mesa publica -->
         <img src="../images/logomesa.png " alt="logo de mesa publica" class="logoFooter1 resize">
+
 
         <ul class="iconosRedes">
             <li>
@@ -71,7 +75,42 @@
             </li>
         </ul>
 
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-light mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Formulario
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mandar mensaje</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Tú Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Aqui escribe tú mensaje</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
